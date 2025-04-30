@@ -16,7 +16,7 @@ def extract_fields(ocr_text: str) -> dict:
 
     fields = {
         "Name": None,
-        "ID": None,
+        "Address": None,
         "DOB": None
     }
 
@@ -36,7 +36,7 @@ def extract_fields(ocr_text: str) -> dict:
 def validate_document(fields: dict) -> bool:
     #checks if essential fields like Name and DOB are present
 
-    if fields["Name"] and fields["ID"]:
+    if fields["Name"] and fields["DOB"]:
         return True
     return False
 
